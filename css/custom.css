@@ -1,0 +1,164 @@
+﻿.color5 i {
+    background-color: #163b61;
+}
+
+.color6 i {
+    background-color: #9dccc8;
+}
+
+.section-title::before {
+    border-bottom: 2px solid grey;
+}
+
+.vs-nav li a {
+    color: grey;
+}
+
+h2 i[class^="icon-"], h2 i[class*=" icon-"], h2 i.fa {
+    color: grey;
+    border: 2px solid grey;
+    width: 45px;
+}
+
+.header p {
+    font-size: 1.5em;
+    margin: .1em 0 .6em;
+    display: inline-block;
+    font-style: italic;
+    padding: 6px 10px;
+    background: none;
+    /* color: #345; */
+    color: rgba(0,0,0,.7);
+    border-radius: 4px;
+    line-height: 1;
+}
+
+.service p {
+    color: grey;
+}
+
+.event {
+    border: 3px solid grey;
+}
+
+    .event::before {
+        border-right-color: grey;
+    }
+
+    .event h5 {
+        color: grey;
+    }
+
+.filters li a {
+    color: grey;
+    border: 1px solid grey;
+}
+
+.letter-title {
+    color: grey;
+}
+
+input:not([type="submit"]):not([type="button"]):not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {
+    color: grey;
+    border: 2px solid grey;
+}
+
+.event p:before {
+    background: grey;
+}
+
+.header img {
+    max-height: 250px;
+    border-radius: 0;
+}
+
+.skill-unit .bar .progress, .event .date, .letter-info p i, .media-cell-desc .date, #nprogress .bar, #fancybox-close, .portfolio-nav a.button.back {
+    background: #1EA267;
+}
+
+.rotate-words {
+    min-height: 34.6px;
+    text-indent: 0;
+    /* margin-top: 4px; */
+}
+
+@media screen and (max-width: 767px) {
+    .rotate-words {
+        min-height: 28px;
+        min-width: 166px;
+    }
+}
+
+.media-cell-desc {
+    padding: 20px 20px;
+    border-style: solid;
+    border-width: 1px;
+    background: #fff;
+    border-color: #EAEDEF;
+    border-radius: 0 0 4px 4px;
+    height: 90px;
+}
+
+/*#fancybox-title-float-main {
+    padding: 20px 20px;
+}*/
+
+#fancybox-title-float-main a {
+    font-size: 1.5em;
+}
+
+.testo::before {
+    display: none;
+}
+
+.testo a {
+    color: #6A7686;
+}
+
+    .testo a:hover {
+        color: #096;
+        transition: color 200ms linear;
+    }
+
+#fancybox-wrap {
+    padding-bottom: 15px;
+}
+
+h2 span.funny {
+    font-size: 16px;
+}
+
+.color3 i {
+    background: #22B573;
+}
+
+@supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee)) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) {
+    .rotate-words {
+        min-height: 34px;
+    }
+}
+
+@media screen and (max-width: 981px) {
+    h2 span.funny {
+        display: block;
+        margin-bottom: -42px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    h2 span.funny {
+        margin-bottom: -35px;
+    }
+
+    @supports (-webkit-appearance:none) and (not (overflow:-webkit-marquee)) and (not (-ms-ime-align:auto)) and (not (-moz-appearance:none)) {
+        .rotate-words {
+            min-height: 27px;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            .rotate-words {
+                min-height: 26px;
+            }
+        }
+    }
+}

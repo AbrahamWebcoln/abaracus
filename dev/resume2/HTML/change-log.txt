@@ -1,0 +1,93 @@
+
+---
+CHANGE LOG
+---
+
+v.1.2.2 - 25 August 2016
+---
+
+improved : latest tweets works with just username, without widget-id 
+
+changed files
+
+- js/main.js
+- js/twitterFetcher_v10_min.js
+- removed data attribute from <div id="latest-tweets"> : data-twitterId=""
+- added new data attribute to <div id="latest-tweets"> : data-twitter-name="your-twitter-username-here"
+
+
+----
+
+
+v1.2.1 - 21 Apr 2016
+
+- fixed : javascript break on firefox
+
+*** changed files
+
+	- js/main.js 
+
+---
+
+v1.2 - 20 Apr 2016
+
+- improved : overall design
+- updated : fontawesome
+- fixed : latest tweets not working
+- fixed : rotate-words not rotating issue
+- fixed : portfolio x2 masonry layout issue
+
+*** changed files
+
+	- css/main.css
+	- css/skins/overlay.css
+	- css/skins/overlay-bold.css
+	- css/tooltipster.css
+	- css/fonts/font-awesome folder
+	- js/main.js
+	- js/jquery.isotope.min.js
+	- js/twitterFetcher_v10_min.js
+
+-----
+
+v1.1 - 18 October 2015
+
+- updated : font-awesome font icons to 4.4.0
+- fixed : service column drops on tablets
+- added : multiple slider support on same page
+- fixed : disabled page navigating with keyboard keys if any input is focused
+- fixed : full screen video issue in chrome
+- fixed : rotate words overflow cut
+- fixed : modern layout is activated in IE11
+- fixed : fitRows layout option for latest posts and portfolio page
+- fixed : clicking portfolio scrolls to the top
+- improved : rotate words module on older browsers
+- improved : restoring page from url hashtag functionality
+- improved : rotate words module (now supports multiple instance)
+- fixed : some portfolio images missing in older IEs
+- fixed : page shaking when navigating between portfolio items
+- fixed : dropcap firefox style
+- added : include retweets option to latest tweets widget
+- added : deviantart social icon
+
+*** changed files
+
+	- css/main.css
+	- css/fonts/font-awesome
+	- css/fonts/fontello
+	- js/main.js
+	- js/jquery.isotope.min.js
+	- js/triple-layout.js
+	- js/modernizr.custom.js
+
+-----
+
+v1.0.1 - 19.03.2014
+
+- improved latest posts module style
+- added support for self embed video/audio support on ajax portfolio single pages.
+
+*** changed files
+
+	- css/main.css
+	- js/main.js
