@@ -53,7 +53,7 @@ var $container, $blog_container;
 
         // ------------------------------
         /* LATEST TWEETS WIDGET */
-        var latest_tweets = $('#latest-tweets');
+        /* var latest_tweets = $('#latest-tweets');
         if (latest_tweets.length) {
             var config = {
                 "profile": { "screenName": latest_tweets.data("twitter-name") },
@@ -79,7 +79,7 @@ var $container, $blog_container;
                 latest_tweets.html(html);
             }
             twitterFetcher.fetch(config);
-        }
+        }*/
         // ------------------------------
 
 
