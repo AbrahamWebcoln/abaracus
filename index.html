@@ -250,7 +250,11 @@
                         <!-- portfolio-item - lightbox image -->
                         <div class="media-cell maintenance image hentry">
                             <div class="media-box">
-                                <img src="portfolio/pictures/creighton.png" alt="Creighton University">
+                                <picture>
+                                    <source type="image/webp" srcset="portfolio/pictures/creighton.webp">
+                                    <source type="image/jpeg" srcset="portfolio/pictures/creighton.png">
+                                    <img src="portfolio/pictures/creighton.png" alt="Creighton University">
+                                </picture>
                                 <div class="mask"></div>
                                 <!-- lightbox - image -->
                                 <a href="portfolio/pictures/creighton.png" title="<a href='https://www.creighton.edu/' target='_blank'>Creighton University</a>" data-fancybox="images" class="lightbox"></a>
