@@ -4,11 +4,11 @@ var portfolioKeyword;
 var $container, $blog_container;
 
 
-(function ($) {
+(function($) {
 
 
     /* DOCUMENT LOAD */
-    $(function () {
+    $(function() {
 
 
         // ------------------------------
@@ -26,21 +26,20 @@ var $container, $blog_container;
 
             if (Modernizr.csstransforms) {
 
-                rotate_words.each(function (index, element) {
+                rotate_words.each(function(index, element) {
                     $(element).find('span').eq(0).addClass('active');
-                    setInterval(function () {
+                    setInterval(function() {
                         next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
                         $(element).find('.active').addClass('rotate-out').removeClass('rotate-in active');
                         $(element).find('span').eq(next_word_index).addClass('rotate-in active').removeClass('rotate-out');
                     }, 3000);
                 });
 
-            }
-            else {
+            } else {
 
-                rotate_words.each(function (index, element) {
+                rotate_words.each(function(index, element) {
                     $(element).find('span').eq(0).addClass('active').show();
-                    setInterval(function () {
+                    setInterval(function() {
                         next_word_index = $(element).find('.active').next().length ? $(element).find('.active').next().index() : 0;
                         $(element).find('.active').removeClass('active').slideUp(500);
                         $(element).find('span').eq(next_word_index).addClass('active').slideDown(500);
@@ -56,7 +55,9 @@ var $container, $blog_container;
         var latest_tweets = $('#latest-tweets');
         if (latest_tweets.length) {
             var config = {
-                "profile": { "screenName": latest_tweets.data("twitter-name") },
+                "profile": {
+                    "screenName": latest_tweets.data("twitter-name")
+                },
                 "domId": '',
                 "maxTweets": latest_tweets.data("tweet-count"),
                 "enableLinks": true,
@@ -67,6 +68,7 @@ var $container, $blog_container;
                 "customCallback": handleTweets,
                 "showInteraction": false
             };
+
             function handleTweets(tweets) {
                 var x = tweets.length;
                 var n = 0;
@@ -87,7 +89,7 @@ var $container, $blog_container;
 
         // ------------------------------
         // SEARCH
-        $('.search-link').click(function () {
+        $('.search-link').click(function() {
             $(this).toggleClass('active');
             $('.header-search').slideToggle();
         });
@@ -118,22 +120,28 @@ var $container, $blog_container;
             if (classicLayout) {
                 $('html').addClass('classic-layout');
                 setActivePage();
-                setTimeout(function () { setMasonry(); }, 600);
-                $.address.change(function () {
+                setTimeout(function() {
+                    setMasonry();
+                }, 600);
+                $.address.change(function() {
                     setActivePage();
                     initializeMap();
-                    setTimeout(function () { setMasonry(); }, 100);
+                    setTimeout(function() {
+                        setMasonry();
+                    }, 100);
                 });
             }
             // initialize triple layout
             $.initTripleLayout();
-            setTimeout(function () { refreshMasonry(); }, 300);
+            setTimeout(function() {
+                refreshMasonry();
+            }, 300);
             // ------------------------------
 
 
             // FULL BROWSER BACK BUTTON SUPPORT 
             var prevUrl = -1;
-            $.address.change(function () {
+            $.address.change(function() {
                 var detailUrl = giveDetailUrl();
                 if (detailUrl != -1) {
                     showProjectDetails(detailUrl);
@@ -163,7 +171,7 @@ var $container, $blog_container;
         // ------------------------------
         // PORTFOLIO DETAILS
         // Show details
-        $(".one-page-layout a.ajax").live('click', function () {
+        $(".one-page-layout a.ajax").live('click', function() {
 
             var returnVal;
             var url = $(this).attr('href');
@@ -189,7 +197,7 @@ var $container, $blog_container;
         // FORM VALIDATION
         // comment form validation fix
         $('#commentform').addClass('validate-form');
-        $('#commentform').find('input,textarea').each(function (index, element) {
+        $('#commentform').find('input,textarea').each(function(index, element) {
             if ($(this).attr('aria-required') == "true") {
                 $(this).addClass('required');
             }
@@ -200,7 +208,7 @@ var $container, $blog_container;
 
         // validate form
         if ($('.validate-form').length) {
-            $('.validate-form').each(function () {
+            $('.validate-form').each(function() {
                 $(this).validate();
             });
         }
@@ -216,7 +224,7 @@ var $container, $blog_container;
 
         // ------------------------------
         /* TOOLTIPS */
-        $('.tooltip').each(function (index, element) {
+        $('.tooltip').each(function(index, element) {
             $(this).tooltipster({
                 position: $(this).attr('data-tooltip-pos'),
                 fixedWidth: 300,
@@ -264,7 +272,7 @@ var $container, $blog_container;
 
 
     // WINDOW ONLOAD
-    window.onload = function () {
+    window.onload = function() {
 
         NProgress.done();
 
@@ -283,6 +291,7 @@ var $container, $blog_container;
     // ------------------------------
     // INITIALIZE
     var inAnimation, outAnimation;
+
     function initialize() {
         inAnimation = $('html').attr('data-inAnimation');
         outAnimation = $('html').attr('data-outAnimation');
@@ -295,7 +304,7 @@ var $container, $blog_container;
     function setup() {
         // ------------------------------
         // LIGHTBOX
-        setupLigtbox();
+        setupLightbox();
         // ------------------------------
 
 
@@ -311,7 +320,7 @@ var $container, $blog_container;
 
         // ------------------------------
         // TABS
-        $('.tabs').each(function () {
+        $('.tabs').each(function() {
             if (!$(this).find('.tab-titles li a.active').length) {
                 $(this).find('.tab-titles li:first-child a').addClass('active');
                 $(this).find('.tab-content > div:first-child').show();
@@ -320,8 +329,10 @@ var $container, $blog_container;
             }
         });
 
-        $('.tabs .tab-titles li a').click(function () {
-            if ($(this).hasClass('active')) { return; }
+        $('.tabs .tab-titles li a').click(function() {
+            if ($(this).hasClass('active')) {
+                return;
+            }
             $(this).parent().siblings().find('a').removeClass('active');
             $(this).addClass('active');
             $(this).parents('.tabs').find('.tab-content > div').hide().eq($(this).parent().index()).show();
@@ -335,7 +346,7 @@ var $container, $blog_container;
         var toggleSpeed = 300;
         $('.toggle h4.active + .toggle-content').show();
 
-        $('.toggle h4').click(function () {
+        $('.toggle h4').click(function() {
             if ($(this).hasClass('active')) {
                 $(this).removeClass('active');
                 $(this).next('.toggle-content').stop(true, true).slideUp(toggleSpeed);
@@ -353,91 +364,7 @@ var $container, $blog_container;
             }
             return false;
         });
-        // ------------------------------
 
-
-
-        // ------------------------------
-        // RESPONSIVE VIDEOS
-        //        if ($('.media-wrap, .portfolio-single').length) {
-        //            $(".media-wrap, .portfolio-single").fitVids();
-        //        }
-        // ------------------------------
-
-
-
-        // ------------------------------
-        // UNIFORM
-        //        $("select:not([multiple]), input:checkbox, input:radio, input:file").uniform();
-        //        var ua = navigator.userAgent.toLowerCase();
-        //        var isAndroid = ua.indexOf("android") > -1;
-        //        var isWindowsPhone = ua.indexOf("windows phone") > -1;
-        //        if (isAndroid) {
-        //            $('html').addClass('android');
-        //        }
-        //        if (!isWindowsPhone) {
-        //
-        //            // ------------------------------
-        //            // remove click delay on touch devices
-        //            FastClick.attach(document.body);
-        //            // ------------------------------
-        //        }
-        // ------------------------------
-
-
-
-        // ------------------------------
-        /* FLEX SLIDER */
-
-        //var $flexslider = $('.flexslider');
-        //if ($flexslider.length) {
-
-        //    $flexslider.each(function () {
-
-        //        //wait for images
-        //        $(this).imagesLoaded(function () {
-
-        //            //remove loading
-        //            $(this).find('.loading').remove();
-
-        //            //setup slider
-        //            $(this).flexslider({
-        //                smoothHeight: true,
-        //                slideshow: $(this).attr('data-autoplay') != "false",
-        //                slideshowSpeed: $(this).attr('data-interval'),
-        //                animationSpeed: $(this).attr('data-animationSpeed'),
-        //                animation: $(this).attr('data-animation'),
-        //                direction: $(this).attr('data-direction'),
-        //                directionNav: $(this).attr('data-directionNav') != "false",
-        //                controlNav: $(this).attr('data-controlNav') != "false",
-        //                randomize: $(this).attr('data-randomize') == "true",
-        //                startAt: $(this).attr('data-startAt') != null ? parseInt($(this).attr('data-startAt')) : 0,
-        //                animationLoop: $(this).attr('data-animationLoop') != "false",
-        //                pauseOnHover: $(this).attr('data-pauseOnHover') != "false",
-        //                reverse: $(this).attr('data-reverse') == "true",
-        //                prevText: "",
-        //                nextText: "",
-        //                start: function (slider) {
-        //                    slider.find('li img').click(function (event) {
-        //                        event.preventDefault();
-        //                        slider.flexAnimate(slider.getTarget("next"));
-        //                    });
-        //                }
-        //            });
-
-        //        });
-
-        //    });
-        //}
-        // ------------------------------
-
-
-        // ------------------------------
-        /* MEDIAELEMENT.JS - self hosted html5 video and audio player */
-        //        if ($('video,audio').length) {
-        //            $('video,audio').mediaelementplayer({ audioHeight: 50 });
-        //        }
-        // ------------------------------
     }
     // ------------------------------
 
@@ -451,7 +378,7 @@ var $container, $blog_container;
         var path = $.address.path();
         path = path.slice(1, path.length);
         path = giveDetailUrl() != -1 ? portfolioKeyword : path;
-        if (path == "") {  // if hash tag doesnt exists - go to first page
+        if (path == "") { // if hash tag doesnt exists - go to first page
             var firstPage = $('.vs-nav li').first().find('a').attr('href');
             path = firstPage.slice(2, firstPage.length);
             $.address.path(path);
@@ -465,7 +392,9 @@ var $container, $blog_container;
         setCurrentMenuItem();
 
         if (path.indexOf(portfolioKeyword) != -1) {
-            setTimeout(function () { setMasonry(); }, 100);
+            setTimeout(function() {
+                setMasonry();
+            }, 100);
         }
 
         $("body").scrollTop(0);
@@ -480,11 +409,11 @@ var $container, $blog_container;
 
         var masonry = $('.portfolio-items, .latest-posts');
         if (masonry.length) {
-            masonry.each(function (index, el) {
+            masonry.each(function(index, el) {
 
                 // call isotope
                 refreshMasonry();
-                $(el).imagesLoaded(function () {
+                $(el).imagesLoaded(function() {
                     $(el).isotope({
                         layoutMode: $(el).data('layout') ? $(el).data('layout') : 'masonry'
                     });
@@ -496,9 +425,11 @@ var $container, $blog_container;
                     // filters
                     var filters = $(el).siblings('.filters');
                     if (filters.length) {
-                        filters.find('a').on("click", function () {
+                        filters.find('a').on("click", function() {
                             var selector = $(this).attr('data-filter');
-                            $(el).isotope({ filter: selector });
+                            $(el).isotope({
+                                filter: selector
+                            });
                             $(this).parent().addClass('current').siblings().removeClass('current');
                             refreshMasonry();
                             return false;
@@ -510,9 +441,11 @@ var $container, $blog_container;
             }); //each
         }
     }
-    $(window).on('resize debouncedresize', function () {
+    $(window).on('resize debouncedresize', function() {
         refreshMasonry();
-        setTimeout(function () { refreshMasonry(); }, 1000)
+        setTimeout(function() {
+            refreshMasonry();
+        }, 1000)
     });
     // ------------------------------
 
@@ -522,7 +455,7 @@ var $container, $blog_container;
 
         var masonry = $('.portfolio-items, .latest-posts');
         if (masonry.length) {
-            masonry.each(function (index, el) {
+            masonry.each(function(index, el) {
 
                 // check if isotope initialized
                 if ($(el).data('isotope')) {
@@ -533,7 +466,7 @@ var $container, $blog_container;
                     var columns = Math.round(containerW / itemW);
 
                     // set the widths (%) for each of item
-                    items.each(function (index, element) {
+                    items.each(function(index, element) {
                         var multiplier = $(this).hasClass('x2') && columns > 1 ? 2 : 1;
                         var itemRealWidth = (Math.floor(containerW / columns) * 100 / containerW) * multiplier;
                         $(this).css('width', itemRealWidth + '%');
@@ -541,7 +474,11 @@ var $container, $blog_container;
 
                     var columnWidth = Math.floor(containerW / columns);
 
-                    $(el).isotope('option', { masonry: { columnWidth: columnWidth } });
+                    $(el).isotope('option', {
+                        masonry: {
+                            columnWidth: columnWidth
+                        }
+                    });
                     $(el).isotope('layout');
                 }
 
@@ -555,7 +492,7 @@ var $container, $blog_container;
     // ------------------------------
     // FILL PROGRESS BARS
     function fillBars() {
-        $('.bar').each(function () {
+        $('.bar').each(function() {
             var bar = $(this);
             bar.find('.progress').css('width', bar.attr('data-percent') + '%');
         });
@@ -566,24 +503,24 @@ var $container, $blog_container;
 
     // ------------------------------
     // LIGHTBOX
-    function setupLigtbox() {
+    function setupLightbox() {
 
         //html5 validate fix
-        $('.lightbox').each(function (index, element) {
+        $('.lightbox').each(function(index, element) {
             $(this).attr('rel', $(this).attr('data-lightbox-gallery'));
         });
 
 
 
         $("[data-fancybox]").fancybox({
-            onStart: function () {
+            onStart: function() {
                 NProgress.start();
                 $('body').addClass('lightbox-active');
             },
-            onClosed: function () {
+            onClosed: function() {
                 $('body').removeClass('lightbox-active');
             },
-            onComplete: function () {
+            onComplete: function() {
                 NProgress.done();
 
             }
@@ -598,14 +535,14 @@ var $container, $blog_container;
                 transitionOut: 'none',
                 overlayColor: '#BEBD97',
                 overlayOpacity: '.6',
-                onStart: function () {
+                onStart: function() {
                     NProgress.start();
                     $('body').addClass('lightbox-active');
                 },
-                onClosed: function () {
+                onClosed: function() {
                     $('body').removeClass('lightbox-active');
                 },
-                onComplete: function () {
+                onComplete: function() {
                     NProgress.done();
                     if ($(this).attr('href').indexOf("soundcloud.com") >= 0) {
                         $('#fancybox-content').height(166);
@@ -615,7 +552,6 @@ var $container, $blog_container;
         }
     }
     // ------------------------------	
-
 
 
 
@@ -646,11 +582,11 @@ var $container, $blog_container;
         }
 
         // ajax : fill data
-        p.empty().load(url + ' .portfolio-single', function () {
+        p.empty().load(url + ' .portfolio-single', function() {
             NProgress.set(0.5);
 
             // wait for images to be loaded
-            p.imagesLoaded(function () {
+            p.imagesLoaded(function() {
 
                 hideLoader();
 
@@ -691,7 +627,9 @@ var $container, $blog_container;
 
         if (Modernizr.csstransforms && Modernizr.csstransforms3d) { // modern browser
             pActive.removeClass('animated ' + inAnimation).addClass('animated ' + outAnimation);
-            setTimeout(function () { pActive.hide().removeClass(outAnimation).empty(); }, 1010)
+            setTimeout(function() {
+                pActive.hide().removeClass(outAnimation).empty();
+            }, 1010)
         } else { //old browser
             pActive.fadeOut().empty();
         }
@@ -719,12 +657,11 @@ var $container, $blog_container;
     function showLoader() {
         NProgress.start();
     }
+
     function hideLoader() {
         NProgress.done();
     }
     // ------------------------------
-
-
 
 
 

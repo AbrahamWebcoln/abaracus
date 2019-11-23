@@ -67,7 +67,6 @@
                             <div class="intro">
                                 <h2>
                                     Hello. I am an experienced web
-
                                     <span class="rotate-words">
                                         <span class="">developer.</span>
                                         <span>designer.</span>
@@ -232,10 +231,14 @@
                         <!-- portfolio-item - lightbox image -->
                         <div class="media-cell development image hentry">
                             <div class="media-box">
-                                <img src="portfolio/pictures/alliance-creighton.png" alt="Creighton University Arizona Health Education Alliance">
+                                <picture>
+                                    <source type="image/webp" srcset="portfolio/pictures/alliance-creighton.webp">
+                                    <source type="image/jpeg" srcset="portfolio/pictures/alliance-creighton.png">
+                                    <img src="portfolio/pictures/alliance-creighton.png" alt="Creighton University Arizona Health Education Alliance">
+                                </picture>
                                 <div class="mask"></div>
                                 <!-- lightbox - image -->
-                                <a href="portfolio/pictures/alliance-creighton.png" title="<a href='https://alliance.creighton.edu/' target='_blank'>Creighton University Arizona Health Education Alliance</a>" data-fancybox="images" class="lightbox"></a>
+                                <a href="portfolio/pictures/alliance-creighton.png" data-caption="<a href='https://alliance.creighton.edu/' target='_blank'>Creighton University Arizona Health Education Alliance</a>" data-fancybox="images" class="lightbox"></a>
                                 <!-- lightbox - image -->
                             </div>
                             <div class="media-cell-desc">
