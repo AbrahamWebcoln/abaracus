@@ -114,7 +114,6 @@ var portfolioKeyword;
 					center: myLatlng
 				}
 				var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
 				var marker = new google.maps.Marker({
 					position: myLatlng,
 					map: map
@@ -138,7 +137,6 @@ var portfolioKeyword;
 	// ------------------------------
 	// INITIALIZE
 	var inAnimation, outAnimation;
-
 	function initialize() {
 		inAnimation = $('html').attr('data-inAnimation');
 		outAnimation = $('html').attr('data-outAnimation');
