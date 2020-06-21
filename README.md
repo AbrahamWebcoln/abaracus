@@ -4,3 +4,9 @@ I'm in the process of completely converting the CSS into SCSS using Gulp and wil
 ```docker build -t html-server-image:v1 .```
 
 ```docker run -d -p 8100:80 -v <path-to-site-directory>:/usr/share/nginx/html  html-server-image:v1```
+
+Install Gulp
+
+```npm install --save-dev gulp gulp-concat```
+
+```npm install --save-dev gulp-clean-css gulp-minify```
