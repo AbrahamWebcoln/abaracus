@@ -1339,7 +1339,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	text-transform: uppercase;
 }
 
-.professional-development, .continuing-ed, .recog{
+.professional-development, .continuing-ed, .recog, .academic{
 	background-color: #fff;
 }
 
@@ -1347,14 +1347,14 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	background-color: #eeeeee;
 }
 
-.academic {
+/* .academic {
 	background-color: #00bdbd;
 }
 .academic h2 {
 	color: #fff;
-}
+} */
 
-.professional-development h2, .self-assessment-goals h2, .continuing-ed h2, .continuing-comp h2, .recog h2{
+.professional-development h2, .academic h2, .self-assessment-goals h2, .continuing-ed h2, .continuing-comp h2, .recog h2{
 	color: #ff675f;
 	padding-bottom: 40px;
 }
