@@ -35,9 +35,9 @@
 
 		$mail_result = mail( $to, $subject, $body, $headers );
 
-		if ( $mail_result == true)
+		if ( $mail_result)
 		{
-			echo "<script>alert('Mail was sent !');</script>";
+			echo '<script type="text/javascript">alert("Thanks for your interest. Your Resume has been sent to HR@prominData.com");window.location.assign("Careers.html");</script>';
     
 		}
 		else
