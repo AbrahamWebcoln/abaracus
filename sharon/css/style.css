@@ -1496,6 +1496,7 @@ ul.eval-container li:hover span.hoverBox .linKed{
 .continuing-ed a.bntDownload {
 	font-size: 14px;
 	margin-bottom: 20px;
+	width: 350px;
 }
 .col-centered{
     float: none;
