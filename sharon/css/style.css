@@ -734,7 +734,7 @@ header {
 }
 
 .education .heading p {
-	padding-bottom: 41px;
+	margin-top:-10px;
 }
 
 .education h4 {
@@ -1708,6 +1708,7 @@ ul.eval-container li:hover span.hoverBox .linKed {
 
 .education p span {
 	font-weight: bold;
+	font-size:1.3em;
 }
 
 .recog img {
