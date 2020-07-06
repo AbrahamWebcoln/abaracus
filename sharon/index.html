@@ -687,15 +687,40 @@
       <!--contact info end-->
       <!--contact form start-->
       <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
-        <h4>Send me a message!</h4>
-        <div id="message"></div>
-        <form method="post" action="php/contact.php" name="cform" id="cform">
-          <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Your name..." >
-          <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Your email..." >
-          <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your message..."></textarea>
-          <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
-          <div id="simple-msg"></div>
-        </form>
+        <h2 class="section-title"><span><i class="icon-paper-plane"></i>DROP ME A LINE</span></h2>
+                                        
+                                    
+        <!-- .contact-form -->
+        <div class="contact-form">
+          
+            <form id="contact-form" action="send-mail.php" method="post">
+              
+              <!-- enter mail subject here -->
+              <input type="hidden" name="subject" id="subject" value="You have a new message from cvCard!">
+              
+              <p>
+                <label for="name">NAME</label>
+                <input type="text" name="name" id="name" class="required">
+              </p>
+              
+              <p>
+                <label for="email">EMAIL</label>
+                <input type="text" name="email" id="email" class="required email">
+              </p>
+              
+              
+              <p>
+                <label for="message">MESSAGE</label>
+                <textarea name="message" id="message" class="required"></textarea>
+              </p>
+             
+              <p>
+                <input type="submit" class="submit button primary" value="SEND">
+              </p>
+              
+            </form>
+            
+        </div>
       </div>
       <!--contact form end-->
     </div>
