@@ -37,7 +37,8 @@
 
 		if ( $mail_result == true)
 		{
-			echo 'success';
+			echo "<script>alert('Mail was sent !');</script>";
+      echo "<script>document.location.href='contact.php'</script>";
 		}
 		else
 		{
