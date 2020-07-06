@@ -566,27 +566,27 @@ header{
 /*----------------------------------------------------
  8.	Work Experience Style
 ------------------------------------------------------*/
-.exprience{
+.experience{
 	background:#fff;
 }
-.exprience .container{
+.experience .container{
 	padding-top:85px ;
 	padding-bottom:90px ;
 }
 
-.exprience h2{
+.experience h2{
 	color:#ff675f;
 }
-.exprience p{
+.experience p{
 	color:#84868d;
 	/*font-size:13px;*/
 	line-height:18px;
 }
-.exprience .heading p{
+.experience .heading p{
 	padding-bottom:41px;
 }
 
-.exprience h4{
+.experience h4{
 	font-weight:700;
 }
 
@@ -1131,7 +1131,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 		padding-top:50px;
 	}
 	
-	.education .workYear{
+	.experience .workYear, .education .workYear{
 		padding-top:58px;
 	}
 }
@@ -1339,6 +1339,18 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	text-transform: uppercase;
 }
 
+
+
+
+.experience h3 {
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #474d5d;
+}
+
+
+
 .professional-development, .continuing-ed, .recog, .academic{
 	background-color: #fff;
 }
@@ -1382,7 +1394,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	font-weight: 400;
 	text-align: left;
 }
-.education li, .self-assessment-goals li  {
+.education li, .experience li, .self-assessment-goals li  {
 	color: #474d5d;
 }
 
