@@ -37,7 +37,7 @@
 
 		if ( $mail_result)
 		{
-			echo '<script type="text/javascript">alert("Thanks for your interest. Your Resume has been sent to HR@prominData.com");window.location.assign("/");</script>';
+			echo '<script type="text/javascript">alert("Thank you for contacting me. I will respond to you shortly.);window.location.assign("/");</script>';
     
 		}
 		else
