@@ -35,14 +35,14 @@
 
 		$mail_result = mail( $to, $subject, $body, $headers );
 
-		if ( $mail_result == true)
-		{
-			echo 'success';
-		}
-		else
-		{
-			echo 'unsuccess';
-		}
+		// if ( $mail_result == true)
+		// {
+		// 	echo 'success';
+		// }
+		// else
+		// {
+		// 	echo 'unsuccess';
+		// }
 		// end if
 	}
 	else
