@@ -12,7 +12,7 @@
 		{
 			if (contactForm.valid())
 			{
-				// NProgress.start();
+				NProgress.start();
 				var formValues = $(this).serialize();
 				
 				$.post($(this).attr('action'), formValues, function(data)
@@ -26,7 +26,7 @@
 					{
 						$alert.addClass('error');
 					}
-					// NProgress.done();
+					NProgress.done();
 					$alert.removeClass('slideOutRight').show().addClass('slideInLeft');
 					setTimeout(function() { $alert.removeClass('slideInLeft').addClass('slideOutRight'); },2000)
 				});
