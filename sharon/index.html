@@ -681,7 +681,7 @@
         <div class="col-xs-12 col-sm-9 col-md-8 col-lg-8 conForm">
           <h4>Send me a message!</h4>
           <div id="message"></div>
-          <form method="post" action="php/contact.php" name="cform" id="cform">
+          <!-- <form method="post" action="php/contact.php" name="cform" id="cform">
             <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6"
               placeholder="Your name...">
             <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr"
@@ -690,7 +690,40 @@
               placeholder="Your message..."></textarea>
             <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
             <div id="simple-msg"></div>
+          </form> -->
+
+          <form action="contact.php" method="post">
+            <div class="elem-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+            </div>
+            <div class="elem-group">
+              <label for="email">Your E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+            </div>
+            <div class="elem-group">
+              <label for="department-selection">Choose Concerned Department</label>
+              <select id="department-selection" name="concerned_department" required>
+                  <option value="">Select a Department</option>
+                  <option value="billing">Billing</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="technical support">Technical Support</option>
+              </select>
+            </div>
+            <div class="elem-group">
+              <label for="title">Reason For Contacting Us</label>
+              <input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
+            </div>
+            <div class="elem-group">
+              <label for="message">Write your message</label>
+              <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
           </form>
+
+
+
+
         </div>
         <!--contact form end-->
       </div>
