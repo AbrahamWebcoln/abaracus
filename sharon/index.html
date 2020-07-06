@@ -690,20 +690,50 @@
         <h4>Send me a message!</h4>
         <div id="message"></div>                                                                       
         <!-- .contact-form -->
+        <div class="contact-form">
+          
+            <form id="contact-form" action="send-mail.php" method="post">
+              
+              <!-- enter mail subject here -->
+              <input type="hidden" name="subject" id="subject" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" value="You have a new message from sharon.abaracus.com!">
+              
+              <p>
+                <label for="name">NAME</label>
+                <input type="text" name="name" id="name" class="required col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr">
+              </p>
+              
+              <p>
+                <label for="email">EMAIL</label>
+                <input type="text" name="email" id="email" class="required email col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              </p>
+              
+              
+              <p>
+                <label for="message">MESSAGE</label>
+                <textarea name="message" id="message" class="required col-xs-12 col-sm-12 col-md-12 col-lg-12"></textarea>
+              </p>
+             
+              <p>
+                <!-- <input type="submit" class="submit button primary" value="SEND"> -->
+                <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
+              </p>
+              
+            </form>
+            
+        </div>
 
 
 
 
 
 
-
-        <form method="post" action="send-mail.php" name="cform" id="cform">
+        <!-- <form method="post" action="send-mail.php" name="cform" id="cform">
           <input name="name" id="name" type="text" class="col-xs-12 col-sm-6 col-md-6 col-lg-6" placeholder="Your name..." >
           <input name="email" id="email" type="email" class=" col-xs-12 col-sm-6 col-md-6 col-lg-6 noMarr" placeholder="Your email..." >
           <textarea name="comments" id="comments" cols="" rows="" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" placeholder="Your message..."></textarea>
           <input type="submit" id="submit" name="send" class="submitBnt" value="Send message">
           <div id="simple-msg"></div>
-        </form>
+        </form> -->
       </div>
       <!--contact form end-->
     </div>
