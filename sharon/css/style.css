@@ -605,7 +605,7 @@ header{
 	width:120px;
 	height:120px;
 	padding:40px 0 40px 0;
-	
+	font-weight: bold;
 	-webkit-border-radius: 50%;
     border-radius: 50%;
 }
@@ -1321,12 +1321,22 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 
 /*Custom*/
 
-.education .workYear.strengths {
-	background-color: #9cc3e5;
+.education .workYear.strengths{
+	/* background-color: #9cc3e5; */
+	background-color: #648FFF;
+}
+.workDetails.clin .workYear {
+	background-color: #ff675f;
+}
+.workDetails.prof .workYear {
+	background-color:#648FFF ;
 }
 
 .education .workYear.opp {
 	background-color: #a8d08d;
+}
+.workDetails.prof .workYear, .workDetails.clin .workYear {
+font-weight: bold;	
 }
 
 .education .workYear.threats {
@@ -1338,6 +1348,7 @@ ul.portfolioContainer li:hover span.hoverBox .linKed{
 	font-weight: bold;
 	text-transform: uppercase;
 }
+
 
 
 
