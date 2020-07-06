@@ -52,6 +52,5 @@
 	}
 	// end if
 
-	header("Location: /index.html");
 
 ?>
