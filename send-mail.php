@@ -11,25 +11,7 @@
 	$email = trim( $_POST['email'] );
 	$subject = trim( $_POST['subject'] );
 	$message = trim( $_POST['message'] );
-	//$response = $_POST["g-recaptcha-response"];
 
-	//$url = 'https://www.google.com/recaptcha/api/siteverify';
-	//$data = array(
-	//	'secret' => '6LeKhR8UAAAAABiLSLd7BleRPAf2CW-B2qfwJYCn',
-	//	'response' => $_POST["g-recaptcha-response"]
-	//);
-
-	//$options = array(
-	//'http' => array (
-	//	'method' => 'POST',
-	//	'content' => http_build_query($data)
-	//	)
-	//);
-	//$context  = stream_context_create($options);
-	//$verify = file_get_contents($url, false, $context);
-	//$captcha_success=json_decode($verify);
-
-	//&& $captcha_success->success==true
 
 	// check for error
 	$error = false;
