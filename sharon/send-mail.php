@@ -37,7 +37,7 @@
 
 		if ( $mail_result)
 		{
-			echo '<script type="text/javascript">alert("Thank you for sending me a message. I will respond to you shortly.");window.location.assign("/");</script>';
+			echo '<script type="text/javascript">window.location.assign("/");</script>';
     
 		}
 		else
