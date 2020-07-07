@@ -1247,6 +1247,14 @@ ul.portfolioContainer li:hover span.hoverBox .linKed {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+	.experience .workYear,
+	.education .workYear {
+		padding-top: 50px;
+		font-size: 1.15em;
+	}
+}
+
 
 @media screen and (max-width: 991px) {
 	.navbar.navbar-inverse.navbar-static-top a {
