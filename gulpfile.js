@@ -17,4 +17,4 @@ gulp.task('pack-css', function () {
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('default', gulp.parallel('pack-js','pack-css')); 
+gulp.task('default', gulp.series('pack-js','pack-css')); 
