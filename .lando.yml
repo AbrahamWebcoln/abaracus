@@ -1,0 +1,10 @@
+name: abaracus
+recipe: lamp
+config:
+  webroot: .
+services:
+  appserver:
+    build_as_root:
+      - a2enmod headers
+    run_as_root:
+      - service apache2 reload
