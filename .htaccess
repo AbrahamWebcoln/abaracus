@@ -21,8 +21,12 @@ Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 Options -Indexes
 
-# Only redirect errors on production
-RewriteCond %{HTTP_HOST} !^abaracus\.lndo\.site$ [NC]
-ErrorDocument 404 https://www.abaracus.com/404.html
-RewriteCond %{HTTP_HOST} !^abaracus\.lndo\.site$ [NC]
-ErrorDocument 403 https://www.abaracus.com/403.html
+# Serve error pages locally to preserve the original HTTP status.
+ErrorDocument 404 /404.html
+ErrorDocument 403 /403.html
+
+# The portfolio uses direct contact details. Retire the old PHP mail and
+# Twitter endpoints, including copies in the archived template directories.
+<FilesMatch "(?i)\.php$">
+    Require all denied
+</FilesMatch>
