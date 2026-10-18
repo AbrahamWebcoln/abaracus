@@ -1,0 +1,23 @@
+name: Portfolio checks
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check
+      - name: Check committed bundles
+        run: git diff --exit-code -- js/bundle.js js/bundle-min.js css/main-stylesheet.css

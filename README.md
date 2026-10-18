@@ -1,14 +1,47 @@
-# Welcome to my Portfolio Repo
-I'm in the process of completely converting the CSS into SCSS using Gulp and will also be using it to minify libraries and stylesheets, as well as revamp the file structure.
+# Abe Coleman's portfolio
 
-```docker build -t html-server-image:v1 .```
+The main site is static HTML, CSS, and JavaScript. A Node.js script combines the source
+assets into the bundles loaded by `index.html`.
 
-```docker run -d -p 8100:80 -v <path-to-site-directory>:/usr/share/nginx/html  html-server-image:v1```
+## Build
 
-Install Gulp
+Use Node.js 24 (`nvm use` if you use nvm), then run:
 
-```npm install --save-dev gulp gulp-concat```
+```sh
+npm ci
+npm run build
+npm run check
+```
 
-```npm install --save-dev gulp-clean-css gulp-minify```
+Edit the source files listed in `scripts/build.cjs`, then rebuild and commit the
+generated files alongside your changes:
 
-Profit
+- `js/bundle.js`
+- `js/bundle-min.js`
+- `css/main-stylesheet.css`
+
+To rebuild only one asset type, run `npm run build:js` or `npm run build:css`.
+The stylesheet sources are CSS; there is no SCSS compilation step.
+
+## Preview
+
+For a static preview, run:
+
+```sh
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000>. This server does not apply Apache's `.htaccess`
+configuration. To check redirects and error handling, use the existing Lando
+configuration instead:
+
+```sh
+lando start
+```
+
+Lando serves the site at <https://abaracus.lndo.site>.
+
+## Checks
+
+GitHub Actions installs the locked dependencies, builds the bundles, checks
+JavaScript syntax, and verifies that generated assets match the committed files.
