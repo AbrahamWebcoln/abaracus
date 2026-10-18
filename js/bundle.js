@@ -253,7 +253,7 @@
 			
 			// add keyboard events
 			document.addEventListener( 'keydown', function( ev ) {
-				if ( $('input:focus, textarea:focus').length > 0 ) {  return; }
+					if ( $('input:focus, textarea:focus').length > 0 || $('.fancybox-container').length ) { return; }
 				var keyCode = ev.keyCode || ev.which,
 					arrow = {
 						left: 37,
@@ -275,6 +275,7 @@
 	}
 
 })(jQuery);
+
 /*! NProgress (c) 2013, Rico Sta. Cruz
  *  http://ricostacruz.com/nprogress */
 
